@@ -1,0 +1,128 @@
+.results-panel {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.results-panel.calculated {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 12px 32px rgba(178, 93, 166, 0.15), 0 0 0 1px rgba(178, 93, 166, 0.3);
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.results-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.results-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.result-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--border-subtle);
+    transition: background 0.5s ease;
+}
+
+.result-card.primary::before {
+    background: var(--gradient-cyan-purple);
+}
+
+.result-card.secondary::before {
+    background: var(--gradient-green-cyan);
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.result-value-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.result-value.glow-text {
+    background: var(--gradient-cyan-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: 0 4px 20px rgba(0, 179, 230, 0.4);
+}
+
+.result-unit {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.result-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    max-width: 80%;
+}
+
+.macros-hint {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.macros-hint p {
+    background: rgba(178, 212, 34, 0.1);
+    color: #c9e82c;
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: inline-block;
+}
