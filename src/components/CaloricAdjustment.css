@@ -74,3 +74,167 @@
     text-shadow: 0 4px 30px rgba(178, 93, 166, 0.5);
     font-size: 3.5rem;
 }
+
+/* Macros Section */
+.macros-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.macros-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--brand-cyan);
+}
+
+.macro-controls {
+    margin-bottom: 2rem;
+}
+
+.macro-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.macro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.macro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.macro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.protein-card::before {
+    background: var(--brand-purple);
+}
+
+.carbs-card::before {
+    background: var(--brand-cyan);
+}
+
+.fats-card::before {
+    background: var(--brand-green);
+}
+
+.macro-name {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.macro-grams {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.macro-cals {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Custom Split Slider */
+.custom-slider-group {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px dashed var(--border-subtle);
+}
+
+.custom-slider-group label {
+    display: block;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-container span {
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.slider-container span:first-of-type {
+    color: var(--brand-cyan);
+    text-align: right;
+}
+
+.slider-container span:last-of-type {
+    color: var(--brand-green);
+}
+
+.custom-range {
+    flex: 1;
+    -webkit-appearance: none;
+    height: 6px;
+    background: linear-gradient(90deg, var(--brand-cyan) 0%, var(--brand-green) 100%);
+    border-radius: 3px;
+    outline: none;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Supplement Callout */
+.supplement-recommendation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: linear-gradient(90deg, rgba(0, 179, 230, 0.1), rgba(178, 212, 34, 0.1));
+    border: 1px solid rgba(0, 179, 230, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.supplement-icon {
+    font-size: 1.5rem;
+}
+
+.supplement-recommendation strong {
+    color: var(--brand-green);
+}
