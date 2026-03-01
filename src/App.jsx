@@ -3,6 +3,7 @@ import './App.css';
 import Toggle from './components/Toggle';
 import CalculatorForm from './components/CalculatorForm';
 import ResultsDisplay from './components/ResultsDisplay';
+import CaloricAdjustment from './components/CaloricAdjustment';
 
 function App() {
   const [data, setData] = useState({
@@ -11,6 +12,7 @@ function App() {
     gender: 'male',
     age: '',
     weight: '',
+    goalWeight: '',
     heightCm: '',
     heightFt: '',
     heightIn: '',
@@ -93,6 +95,8 @@ function App() {
         <CalculatorForm data={data} onChange={setData} />
 
         <ResultsDisplay bmr={bmr} tdee={tdee} />
+
+        <CaloricAdjustment data={data} tdee={tdee} />
       </main>
     </div>
   );

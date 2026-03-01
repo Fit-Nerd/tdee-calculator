@@ -41,7 +41,7 @@ const CalculatorForm = ({ data, onChange }) => {
 
             <div className="form-row">
                 <div className="form-group">
-                    <label>Weight</label>
+                    <label>Current Weight</label>
                     <div className="input-with-suffix">
                         <input type="number" value={data.weight} onChange={(e) => handleNumberInput(e, 'weight')} placeholder={data.unit === 'metric' ? '75' : '165'} />
                         <span className="suffix">{data.unit === 'metric' ? 'kg' : 'lbs'}</span>
@@ -49,6 +49,16 @@ const CalculatorForm = ({ data, onChange }) => {
                 </div>
 
                 <div className="form-group">
+                    <label>Goal Weight</label>
+                    <div className="input-with-suffix">
+                        <input type="number" value={data.goalWeight} onChange={(e) => handleNumberInput(e, 'goalWeight')} placeholder={data.unit === 'metric' ? '70' : '150'} />
+                        <span className="suffix">{data.unit === 'metric' ? 'kg' : 'lbs'}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="form-row">
+                <div className="form-group full-width">
                     <label>Height</label>
                     {data.unit === 'metric' ? (
                         <div className="input-with-suffix">
